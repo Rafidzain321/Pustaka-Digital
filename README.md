@@ -26,7 +26,7 @@
 - **Android Studio**
 - **XML** untuk layout
 - **RecyclerView** untuk daftar buku
-- **SharedPreferences / Firebase / Room (jika ada)** untuk penyimpanan data
+- **SharedPreferences / Firebase / Room** untuk penyimpanan data
 
 ---
 
