@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "718437740652",
+    "project_id": "rafid1-54932",
+    "storage_bucket": "rafid1-54932.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718437740652:android:0e24742b95daf769662849",
+        "android_client_info": {
+          "package_name": "com.example.pustaka"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCd1Fn1f71CFF_Rw-xqG4bJanRShu9hTbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

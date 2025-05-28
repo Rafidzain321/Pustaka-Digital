@@ -1,0 +1,73 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg"
+    tools:context=".basic_api.ui.view.LoanFragment">
+
+    <!-- Main Content wrapped in ConstraintLayout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:paddingTop="16dp">
+
+        <!-- Title for the Book List Section -->
+        <TextView
+            android:id="@+id/newsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Favorite Books"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingBottom="8dp" />
+
+        <!-- Container for different states (empty, loading, error, success) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:weightSum="1"
+            app:layout_constraintTop_toBottomOf="@id/newsText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <!-- Empty state layout -->
+            <include
+                android:id="@+id/empty_newHoriList"
+                layout="@layout/layout_empty"
+                android:visibility="gone" />
+
+            <!-- Loading state layout -->
+            <include
+                android:id="@+id/loading_newHoriList"
+                layout="@layout/item_loading"
+                android:visibility="gone" />
+
+            <!-- Error state layout -->
+            <include
+                android:id="@+id/error_newHoriList"
+                layout="@layout/item_error"
+                android:visibility="gone" />
+
+            <!-- RecyclerView to display the list of books -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favoriteRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintTop_toBottomOf="@id/empty_newHoriList"
+                tools:listitem="@layout/list_book_item" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

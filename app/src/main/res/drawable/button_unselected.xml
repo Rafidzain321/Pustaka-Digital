@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FFFFFF"/> <!-- Background putih -->
+    <stroke android:color="#6600BB" android:width="2dp"/> <!-- Garis ungu di pinggir -->
+    <corners android:radius="10dp"/> <!-- Sudut tombol -->
+</shape>
